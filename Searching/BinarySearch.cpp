@@ -14,9 +14,7 @@ int binarySearch(vector<int>& nums, int key) {
 
         if (key == nums[mid]) {
             return mid;
-        }
-
-        if (key < nums[mid]) {
+        } else if (key < nums[mid]) {
             end = mid - 1;
         } else {
             start = mid + 1;
