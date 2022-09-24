@@ -56,6 +56,7 @@ int binarySearch(MountainArray &mountainArr, int key, int start, int end) {
     }
     return result;
 } 
+
 int resverseBinarySearch(MountainArray &mountainArr, int key, int start, int end) {
     int mid = start + (end - start)/2;
     int result = INT_MAX;
