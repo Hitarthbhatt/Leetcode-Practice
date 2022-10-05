@@ -11,8 +11,8 @@ int main() {
     v.push_back(6);
     v.push_back(7);
 
-    auto value = v.begin();
-    cout << "Lower -> " << value << endl;
+    // auto value = v.begin();
+    // cout << "Lower -> " << value << endl;
 
 	return 0; 
 }
