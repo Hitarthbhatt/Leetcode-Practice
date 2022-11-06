@@ -6,32 +6,28 @@
 
 using namespace std;
 
-void isPalindrome(string first, string second) {
-
-    int start = 0;
-    int end = first.length() - 1;
-
-    while(start <= end) {
-        swap(first[start++], first[end--]);
-    }
-
-    if (first == second) {
-        cout << "YES";
-    } else {
-        cout << "NO";
-    }
-
+long long getEndPoint(long long num) {
+        long long result = 0;
+        int count = 0;
+        
+        while (num >= 10) {
+            int ans = num % 10;
+            result += ans * pow(10, count++); 
+            num = num / 10;
+        }
+        
+        return result;
 }
-
 
 
 int main() {
 
-    string first, second;
+    int end = 491;
 
-    cin >> first >> second;
-
-    isPalindrome(first, second);
+    while (end > 0) {
+        end = getEndPoint(end);
+        cout << end << endl;
+    }
 
     return 0;
 }
