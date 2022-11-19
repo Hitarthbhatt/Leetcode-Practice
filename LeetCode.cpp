@@ -9,11 +9,19 @@ using namespace std;
 
 int main() {
 
-    int n = 3;
+    vector<vector<int> > ans(5);
+    int i = 0;
 
-    int newVal = n & n - 1;
+    for (int i = 0; i < ans.size(); i++) {
+        ans[i].resize(2);
+        cout << "[ ";
+        for (int j = 0; j < 2; j++) {
+            cout << ans[i][j];
+        }
+        cout << " ], ";
+    }
 
-    cout << (n && !newVal) << endl;
+    cout << endl;
 
     return 0;
 }
