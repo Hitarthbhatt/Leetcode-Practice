@@ -23,10 +23,10 @@ using namespace std;
 class Solution {
 public:
     int maxArea(vector<int>& height) {
-        return getMaxVolume(height, 0, height.size() - 1, 0, 0);
+        return getMaxVolume(height, 0, height.size() - 1, 0);
     }
 
-    int getMaxVolume(vector<int>& height, int left, int right, int leftOver, int maxSoFar) {
+    int getMaxVolume(vector<int>& height, int left, int right, int maxSoFar) {
 
         if (left > right) {
             return maxSoFar;
@@ -39,9 +39,9 @@ public:
         maxSoFar = (totalVolume, maxSoFar);
 
         if (height[left] <= height[right]) {
-            return getMaxVolume(height, left+1, right, leftOver+1, maxSoFar);
+            return getMaxVolume(height, left+1, right, maxSoFar);
         } else {
-            return getMaxVolume(height, left, right-1, leftOver+1, maxSoFar);
+            return getMaxVolume(height, left, right-1, maxSoFar);
         }
 
     }
